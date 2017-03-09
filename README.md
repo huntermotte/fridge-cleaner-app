@@ -1,0 +1,1 @@
+This is my capstone project for Thinkful's Front End Web Development section. This app helps users see a list of recipes (using Recipe Puppy's API) that include the individual ingredients they search for.
