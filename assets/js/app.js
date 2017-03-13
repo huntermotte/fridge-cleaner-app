@@ -11,7 +11,6 @@ function displayRecipes(data) {
   var resultElement = ''
   if (data.results) {
     data.results.forEach(function(result) {
-      console.log(result);
       resultElement += '<p>' + '<a href=' + '"' + result.href + '"' + '>' + result.title + '</a></p>' + '<p>' + result.ingredients + '</p>' + '<p>' + result.href + '</p>'
     });
   }
@@ -29,4 +28,10 @@ function watchSubmit() {
   });
 }
     
-$(function(){watchSubmit();})
+$(function(){
+  $('.searchbar').submit(function(event) {
+    event.preventDefault();
+    var query = $(this).find('.query').val();
+    getDataFromAPI(query, displayRecipes)
+  });
+})
