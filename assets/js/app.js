@@ -1,4 +1,4 @@
-var recipePuppyAPI = 'http://www.recipepuppy.com/api/'
+var recipePuppyAPI = 'https://www.recipepuppy.com/api/'
 
 function getDataFromAPI(ingredients, callback) {
   var query = {

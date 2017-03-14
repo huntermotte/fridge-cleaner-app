@@ -17,5 +17,15 @@ input[type=text]:focus {
 }
 
 .search-results {
-    
+
+}
+
+.search-button {
+    width: 100px;
+    height: 50px;
+}
+
+.home-button {
+    width: 100px;
+    height: 50px;
 }
