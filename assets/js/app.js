@@ -1,10 +1,16 @@
 var recipePuppyAPI = 'https://crossorigin.me/http://www.recipepuppy.com/api/'
 
 function getDataFromAPI(ingredients, callback) {
-  var query = {
-    i: ingredients
-  }
-  $.getJSON(recipePuppyAPI, query, callback)
+  $.ajax({
+  url: recipePuppyApi + '?/i=' + ingredients,
+  method: 'GET',
+  headers: {
+  'Access-Control-Allow-Origin': '*'
+  },
+  success: function(response) {
+  callback(response)
+  } 
+  })
 }
 
 function displayRecipes(data) {
