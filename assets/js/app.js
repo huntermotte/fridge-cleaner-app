@@ -5,7 +5,7 @@ function getDataFromAPI(ingredients, callback) {
   url: recipePuppyAPI + '?/i=' + ingredients,
   method: 'GET',
   headers: {
-  'Access-Control-Allow-Origin': 'https://huntermotte.github.io'
+  'Access-Control-Allow-Origin': 'https://huntermotte.github.io/Capstone-FEWD/'
   },
   success: function(response) {
   callback(response)
