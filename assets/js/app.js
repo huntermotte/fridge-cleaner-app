@@ -1,4 +1,4 @@
-var recipePuppyAPI = 'https://crossorigin.me/http://www.recipepuppy.com/api/'
+var recipePuppyAPI = 'http://www.recipepuppy.com/api/'
 
 function getDataFromAPI(ingredients, callback) {
   $.ajax({
