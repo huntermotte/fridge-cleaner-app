@@ -1,7 +1,7 @@
 var recipePuppyAPI = 'https://cors-anywhere.github.com/http://www.recipepuppy.com/api/'
 function getDataFromAPI(ingredients, callback) {
   $.ajax({
-  url: recipePuppyAPI + '?/i=' + ingredients,
+  url: recipePuppyAPI + '?i=' + ingredients,
   method: 'GET',
   headers: {
   'Access-Control-Allow-Origin': 'https://huntermotte.github.io/Capstone-FEWD/'
@@ -9,7 +9,7 @@ function getDataFromAPI(ingredients, callback) {
   crossDomain: true,
   dataType: 'jsonp',
   success: function(response) {
-  callback(response)
+  console.log(response)
   } 
   })
 }
