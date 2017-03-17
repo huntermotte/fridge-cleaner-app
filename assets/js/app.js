@@ -7,6 +7,8 @@ function getDataFromAPI(ingredients, callback) {
   headers: {
   'Access-Control-Allow-Origin': 'https://huntermotte.github.io/Capstone-FEWD/'
   },
+  crossDomain: true,
+  dataType: 'jsonp',
   success: function(response) {
   callback(response)
   } 
