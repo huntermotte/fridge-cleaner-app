@@ -33,7 +33,8 @@ function watchSubmit() {
     var query = $(this).find('.query').val();
     getDataFromAPI(query, displayRecipes)
   });
-}
+} 
+
     
 $(function(){
   $('.searchbar').submit(function(event) {
