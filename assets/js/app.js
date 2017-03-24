@@ -19,7 +19,7 @@ function displayRecipes(data) {
   else {
     resultElement += '<p>No results</p>';
   }
-  $('.text-center').html(resultElement);
+  $('.text-center').html(resultElement); 
 }
 
 function watchSubmit() {
