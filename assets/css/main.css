@@ -238,7 +238,7 @@ blockquote cite:before {
 
 /* Links */
 a {
-    color: white;
+    color: black;
     word-wrap: break-word;
 
     -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -246,6 +246,10 @@ a {
     -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
     -o-transition: color 0.1s ease-in, background 0.1s ease-in;
     transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+.start {
+    color: white;
 }
 
 a:hover,

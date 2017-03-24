@@ -1,30 +1,25 @@
-var recipePuppyAPI = 'http://www.recipepuppy.com/api/'
+var edamamAPI = 'https://api.edamam.com/search'
+
 function getDataFromAPI(ingredients, callback) {
-  $.ajax({
-  url: recipePuppyAPI + '?i=' + ingredients,
-  method: 'GET',
-  headers: {
-  'Access-Control-Allow-Origin': 'https://huntermotte.github.io/Capstone-FEWD/'
-  },
-  crossDomain: true,
-  dataType: 'jsonp',
-  success: function(response) {
-  console.log(response)
-  } 
-  })
+  var query = {
+    app_id: 'beebcb5b',
+    app_key: '4b9349dfde7418640003d84c1dcbba18',
+    q: ingredients
+  };
+  $.getJSON(edamamAPI, query, callback);
 }
 
 function displayRecipes(data) {
   var resultElement = ''
-  if (data.results) {
-    data.results.forEach(function(result) {
-      resultElement += '<p>' + '<a href=' + '"' + result.href + '"' + '>' + result.title + '</a></p>' + '<p>' + result.ingredients + '</p>' + '<p>' + result.href + '</p>'
+  if (data.hits) {
+    data.hits.forEach(function(hit) {
+      resultElement += '<p class="page-header recipe">' + '<a href=' + '"' + hit.recipe.url + '"' + '>' + hit.recipe.label + '</a></p>' + '<img class="img-rounded" src=' + '"' + hit.recipe.image + '">'
     });
   }
   else {
     resultElement += '<p>No results</p>';
   }
-  $('.search-results').html(resultElement);
+  $('.text-center').html(resultElement);
 }
 
 function watchSubmit() {
