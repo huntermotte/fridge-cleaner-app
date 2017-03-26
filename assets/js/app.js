@@ -13,7 +13,7 @@ function displayRecipes(data) {
   var resultElement = ''
   if (data.hits) {
     data.hits.forEach(function(hit) {
-      resultElement += '<p class="page-header recipe">' + '<a href=' + '"' + hit.recipe.url + '"' + '>' + hit.recipe.label + '</a></p>' + '<a href=' + '"' + hit.recipe.url + '"' + '>' + '<img class="img-rounded" src=' + '"' + hit.recipe.image + '"' + '></a>'
+      resultElement += '<p class="page-header recipe">' + '<a href=' + '"' + hit.recipe.url + '"' + ' ' + 'target="_blank"' + '>' + hit.recipe.label + '</a></p>' + '<a href=' + '"' + hit.recipe.url + '"' + ' ' + 'target="_blank"' + '>' + '<img class="img-rounded" src=' + '"' + hit.recipe.image + '"' + '></a>'
     });
   }
   else {
