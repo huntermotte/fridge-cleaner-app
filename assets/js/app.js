@@ -13,13 +13,13 @@ function displayRecipes(data) {
   var resultElement = ''
   if (data.hits) {
     data.hits.forEach(function(hit) {
-      resultElement += '<p class="page-header recipe">' + '<a href=' + '"' + hit.recipe.url + '"' + '>' + hit.recipe.label + '</a></p>' + '<img class="img-rounded" src=' + '"' + hit.recipe.image + '">'
+      resultElement += '<p class="page-header recipe">' + '<a href=' + '"' + hit.recipe.url + '"' + '>' + hit.recipe.label + '</a></p>' + '<a href=' + '"' + hit.recipe.url + '"' + '>' + '<img class="img-rounded" src=' + '"' + hit.recipe.image + '"' + '></a>'
     });
   }
   else {
     resultElement += '<p>No results</p>';
   }
-  $('.text-center').html(resultElement); 
+  $('.text-center').html(resultElement);
 }
 
 function watchSubmit() {
@@ -28,9 +28,9 @@ function watchSubmit() {
     var query = $(this).find('.query').val();
     getDataFromAPI(query, displayRecipes)
   });
-} 
+}
 
-    
+
 $(function(){
   $('.searchbar').submit(function(event) {
     event.preventDefault();
