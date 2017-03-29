@@ -48,11 +48,16 @@ input[type=text] {
 }
 
 @media screen and (max-width:769px) {
-	#headerwrap h1 {
-		font-size: 80px;
+	.searchbar {
+		width: 100%;
+    padding-left: 15%;
 	}
-	#headerwrap p {
-		font-size: 30px;
-		line-height: 38px;
-	}
+  input[type=text] {
+    width: 40%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    padding: 12px 20px 12px 40px;
+  }
 }
