@@ -61,3 +61,10 @@ input[type=text] {
     padding: 12px 20px 12px 40px;
   }
 }
+
+@media only screen and (min-width : 768px) and (max-width : 1250px) {
+    .searchbar {
+        text-align: center;
+        padding-left: 0px;
+    }
+}

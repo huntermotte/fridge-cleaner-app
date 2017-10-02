@@ -25,6 +25,10 @@ function displayRecipes(data) {
 function watchSubmit() {
   $('.searchbar').submit(function(event) {
     event.preventDefault();
+    if (event.target.input = '') {
+      console.log('error')
+      $('.text-center').append('<p>Please enter ingredients</p>')
+    }
     var query = $(this).find('.query').val();
     getDataFromAPI(query, displayRecipes)
   });
