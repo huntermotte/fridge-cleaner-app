@@ -15,7 +15,7 @@ input[type=text] {
 
 .searchbar {
     padding-top: 75px;
-    padding-left: 215px;
+    text-align: center;
 }
 
 .search-button {
@@ -50,7 +50,7 @@ input[type=text] {
 @media screen and (max-width:769px) {
 	.searchbar {
 		width: 100%;
-    padding-left: 15%;
+        text-align: center;
 	}
   input[type=text] {
     width: 40%;
